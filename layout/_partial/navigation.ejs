@@ -1,0 +1,6 @@
+
+  <nav class="site-nav" role="navigation">
+    <% for (var i in theme.menu){ %>
+      <a href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+    <% } %>
+  </nav>

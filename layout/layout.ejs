@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <!-- Head tag -->
+  <%- partial('_partial/head')%>
+  <body<% if(!( is_home() || is_archive() || is_category() || is_tag() )){ %> class="article"<% } %>>
+    <!-- Header tag -->
+    <%- partial('_partial/header')%>
+
+    <!-- Main Content -->
+    <main class="page-content">
+      <section class="wrapper">
+          <%- body %>
+      </section>
+    </main>
+
+    <!-- Footer tag -->
+    <%- partial('_partial/footer')%>
+  </body>
+</html>

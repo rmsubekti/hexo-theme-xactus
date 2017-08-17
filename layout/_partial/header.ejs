@@ -1,0 +1,41 @@
+<%
+var title = page.title;
+
+if (is_archive()){
+  if (is_month()){
+    title += ': ' + page.year + '/' + page.month;
+  } else if (is_year()){
+    title += ': ' + page.year;
+  }
+} else if (is_category()){
+  title = __('category') + ': ' + page.category;
+} else if (is_tag()){
+  title = __('tag') + ': ' + page.tag;
+}
+%>
+<header>
+  <%- partial('navigation') %>
+  <%  if (is_home() || is_archive()){ %>
+  <div class="wrapper">
+    <div class="profile">
+      <a aria-label="Who am i?" href="/about.html">
+        <img alt="<%= config.title %>" id="avatar" src="/images/avatar.jpg" width="80" height="80"/>
+      </a>
+      <h1 class="site-title">
+        <%= config.title %>
+      </h1>
+      <% if(config.subtitle){ %>
+        <p class="site-description">
+          <%= config.subtitle %>
+        </p>
+      <% } %>
+    </div>
+  </div>
+  <% } else if ((is_year()||is_month())||(is_category()||is_tag())){ %>
+  <div class="wrapper">
+    <div class="archive-title">
+      <h1><% if (title){ %><%= title %> <% } %></h1>
+    </div>
+  </div>
+  <% } %>
+</header>

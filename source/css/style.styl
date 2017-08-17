@@ -1,0 +1,95 @@
+@import "nib"
+@import "_variables"
+@import "_util/mixin"
+
+global-reset()
+
+h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, dl, figure, .highlight
+    margin-bottom: 15px
+
+h1
+  font-size: 30px;
+  letter-spacing: -1
+
+::-webkit-scrollbar
+  width: 8px
+  height: 9px
+  background: #f7f7f7
+
+::-webkit-scrollbar-thumb
+ 	background: #e3e3e3
+
+html
+  background: #5badf0
+
+body
+  min-height: 100vh
+  position: relative
+  font:  base-font-weight base-font-size/base-line-height font-sans
+  color:  text-color
+  background-color: background-color
+  -webkit-text-size-adjust: 100%
+  font-feature-settings: "kern" 1
+  font-kerning: normal
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+
+a
+  color: brand-color
+  text-decoration: none
+  &:hover
+    opacity: .8
+
+hr
+  display: block
+  border: none
+  height: 1px
+  margin: 40px auto
+  background: #eee
+
+blockquote
+  color: grey-color;
+  border-left: 4px solid grey-color-light;
+  quote: none
+  margin: 0 0 20px 0
+  position: relative
+  font-style: italic
+  padding-left: 30px
+  p
+    font: italic 300 16px/1.4 font-sans !important
+  footer
+    font-size: font-size
+    margin: line-height 0
+    font-family: font-sans
+    cite
+      &:before
+        content: "—"
+        padding: 0 0.5em
+
+
+img, video
+  display: block
+  margin: 0 auto
+  max-width: 100%
+  vertical-align: middle
+
+.wrapper
+  width: calc(100% - 30px)
+  margin-right: auto
+  margin-left: auto
+  padding-right: 15px
+  padding-left: 15px
+
+.hidden
+  display: none
+  width: 0
+  height: 0
+
+@import "_extend"
+@import "_partial/header"
+@import "_partial/mobile"
+@import "_partial/nav"
+@import "_partial/article"
+@import "_partial/archive"
+@import "_partial/footer"
+@import "_partial/highlight"

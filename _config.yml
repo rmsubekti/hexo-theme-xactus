@@ -1,0 +1,15 @@
+author: Rahmat Subekti
+# Header
+menu:
+  Home: /
+  Github: https://github.com/rmsubekti/xactus
+  Archive: /archive/
+
+# Miscellaneous
+favicon: /favicon.ico
+twitter: rmsubekti
+google_plus: rmsubekti
+fb_admins:
+fb_app_id:
+disqus_shortname: bekti
+google_analytics:

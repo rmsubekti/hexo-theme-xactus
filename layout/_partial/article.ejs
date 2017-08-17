@@ -1,0 +1,28 @@
+<article class="blog-post"  itemscope itemType="http://schema.org/BlogPosting">
+  <%- partial('article/breadcrumbs', {post: item}) %>
+    <header id="post-header">
+      <!-- Title -->
+      <h1 class="post-title">
+        <%- item.title || item.link%>
+      </h1>
+      <!-- Date and Author -->
+      <time class="post-meta" datetime="<%= date_xml(item.date) %>" itemprop="datePublished">
+        <%= item.date.format('DD MMMM YYYY') %>
+      </time>
+      <% var imageUrl = thumbnail(item) %>
+      <% if (imageUrl) { %>
+        <meta itemprop="image" content="<%- imageUrl %>"/>
+      <% } %>
+    </header>
+    <!-- Content -->
+    <section id="post-body" class="article-entry">
+      <%- partial('article/gallery',{post: item}) %>
+      <%- item.content %>
+      <!-- Tags and Categories links -->
+    </section>
+      <%- partial('article/tags', {item: item}) %>
+      <%- partial('article/categories', {item: item}) %>
+      <%- partial('article/footer', {post: item}) %>
+      <%- partial('article/nav', {post: item}) %>
+</article>
+<%- partial('article/disqus') %>

@@ -1,0 +1,11 @@
+<% if (post.categories && post.categories.length){ %>
+  <%
+  var cats = [];
+  post.categories.forEach(function(cat){
+    cats.push('<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="' + url_for(cat.path) + '"><span itemprop="name">' + trim(cat.name) + '</span></a></li>')
+  });
+  %>
+  <ol class="hidden" itemscope itemtype="http://schema.org/BreadcrumbList">
+    <%- cats.join('') %>
+  </ol>
+<% } %>

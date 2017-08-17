@@ -1,0 +1,15 @@
+<div class="blog-post">
+  <a class="post-link" href="<%- config.root %><%- item.path %>">
+    <!-- Date and Author -->
+    <span class="post-meta">
+        <%= item.date.format('MMM YYYY') %>
+    </span>
+    <!-- Title -->
+    <h2 class="post-title">
+      <%- item.title %>
+    </h2>
+    <% if (item.title){%>
+      <span><%- item.subtitle %></span>
+    <% } %>
+  </a>
+</div>

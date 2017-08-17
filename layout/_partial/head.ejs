@@ -1,0 +1,32 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <%- partial('head/title') %>
+  <% if (page.tags) {
+      var keywords = [];
+      for (var i in page.tags.data) {
+          keywords.push(page.tags.data[i].name);
+      }
+  %>
+      <meta name="keywords" content="<%= keywords.join(',') %>" />
+  <% } %>
+  <!-- Open Graph -->
+  <%- open_graph({
+      image:          thumbnail(page),
+      fb_app_id:      theme.fb_app_id,
+      fb_admins:      theme.fb_admins,
+      twitter_id:     theme.twitter,
+      google_plus:    theme.google_plus,
+  }) %>
+  <%- partial('head/manifest') %>
+  <% if (theme.rss){ %>
+    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.favicon %>">
+  <% } %>
+  <%- css('css/style') %>
+  <%- css('fancybox/jquery.fancybox.min') %>
+  <%- partial('google-analytics') %>
+</head>

@@ -1,0 +1,16 @@
+<footer class="post-footer">
+  <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <a rel="me" href="http://twitter.com/<%= theme.twitter %>">
+        <img alt="<%= config.autor %>" class="avatar" src="/images/avatar.jpg" width="60" height="60">
+      <div><span class="name" itemprop="name"><%= config.author %></span><span><%= config.description %></span></div>
+    </a>
+  </div>
+  <span class="share">
+    <a class="twitter" id="twitter" aria-labelledby="twitter post-title" href="https://twitter.com/intent/tweet?text=<%- url_for(post.path) %> - <%= config.title %> by @<%= theme.twitter %>">
+      <span class="icon"><%- partial('_partial/icon/icon-twitter') %> Tweet</span>
+    </a>
+    <a class="facebook" id="facebook" aria-labelledby="facebook post-title" href="https://www.facebook.com/sharer/sharer.php?u=<%- url_for(post.path) %>">
+      <span class="icon"><%- partial('_partial/icon/icon-facebook') %> Share</span>
+    </a>
+  </span>
+</footer>

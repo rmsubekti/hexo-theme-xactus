@@ -1,0 +1,109 @@
+.page-content
+  padding: 10px 0
+  display: block
+  outline: none
+.article .blog-post
+  padding: 120px 0 40px
+#post-header
+  text-align: center
+  h1
+    margin-bottom: 20px
+    color: #222
+    font: 300 32px/1.4em font-sans
+  time
+    font: 400 13px/1.5em font-sans
+    margin: -5px 0 40px
+    color: #b2b9be
+    display: inline-block
+    text-transform: uppercase
+    letter-spacing: 2px
+
+#post-body
+  margin-bottom: spacing-unit
+  text-align: justify
+  h1, h2, h3, h4, h5, h6, strong, em, code
+    font-weight: base-font-weight
+    color: #333
+  h2
+    font-size: 28px
+  h3
+    font-size: 22px
+  h4
+    font-size: 18px
+  p
+    line-height: 1.7
+  ul
+    list-style-type: disc !important
+  ul,
+  ol
+    margin-left: 30px
+    list-style-type: decimal
+
+
+.post-footer
+  font-size: 13px
+  font-weight: bold
+  line-height: 1.4
+  border-top: 1px solid #eee
+  padding:26px 0
+  margin: 40px 0
+  color: #444
+  border-bottom: 1px solid #eee
+  clearfix()
+  .author
+    float: left
+    .avatar
+      height: 36px
+      width: 36px
+      float: left
+      border-radius: 50%
+      margin-top: 3px
+      margin-right: 20px
+      box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee
+    div
+      margin: 0 25px 0 0
+      float: left
+    span
+      color: #aaa
+      font-weight: 500
+      display: block
+      &.name
+        color: #1E2025
+
+table
+  margin: 1rem auto
+  border: 1px solid #e5e5e5
+  border-collapse: collapse
+  td,
+  th
+    padding: .25rem .5rem
+    border: 1px solid #e5e5e5
+  tbody
+    tr:nth-child(odd)
+      td,th
+        background-color: #f9f9f9
+
+.share
+  float: right
+  top: 4px
+  position: relative
+  a
+    font-size: 13px
+    font-weight: bold
+    color: #fff
+    padding: 6px 10px
+    border-radius: 4px
+    margin-left: 2px
+    display: inline-block
+    svg
+      width: 13px
+      height: 13px
+      position: relative
+      top: 2px
+      path
+        fill: #fff
+
+    &.twitter
+      background: #4fafed
+    &.facebook
+      background: #4361b3
